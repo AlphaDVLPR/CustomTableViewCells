@@ -90,6 +90,11 @@ extension SettingTableViewController: SettingTableViewViewCellDelegate {
     
     func cellSettingSwitchValueChanged(cell: SettingTableViewCell, isOn: Bool) {
         
+        guard let setting = cell.setting,
+        let indexPath = tableView.indexPath(for: cell) else {return}
         
+        SettingController.sharedInstance.setIsOn(for: setting, isOn: isOn)
+        
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }
