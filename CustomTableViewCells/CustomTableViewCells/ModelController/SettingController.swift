@@ -23,4 +23,7 @@ class SettingController {
         settings = [apps, books, music]
     }
     
+    func setIsOn(for setting: Settings, isOn: Bool) {
+        setting.isOn = isOn
+    }
 }

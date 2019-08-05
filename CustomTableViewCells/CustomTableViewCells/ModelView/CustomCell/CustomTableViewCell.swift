@@ -8,12 +8,16 @@
 
 import UIKit
 
+protocol SettingTableViewCellDelegate: class {
+    func cellSettingSwitchValueChange(cell: CustomTableViewCell, isOn: Bool)
+}
 class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var IconImageView: UIImageView!
     @IBOutlet weak var isOnSwitch: UISwitch!
     
+    weak var delegate: CustomTableViewCell?
     var setting: Settings? {
         didSet {
             updateViews()
@@ -34,6 +38,12 @@ class CustomTableViewCell: UITableViewCell {
             
         }
     }
+    
+    @IBAction func settingSwitchValueChange(_ sender: Any) {
+        delegate?.settingSwitchValueChange(cell: self, isOn: isOnSwitch.isOn)
     }
+    
+    }
+
 
 
