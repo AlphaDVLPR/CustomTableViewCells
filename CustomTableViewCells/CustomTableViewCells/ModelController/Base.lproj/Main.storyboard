@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RW3-iK-3SU">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -66,6 +66,11 @@
                                         <constraint firstItem="48Q-eZ-ukG" firstAttribute="top" secondItem="SFl-dp-Vvc" secondAttribute="top" id="el4-on-2eA"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="IconImageView" destination="2H9-yG-zGV" id="nAQ-uv-V0a"/>
+                                    <outlet property="NameLabel" destination="4IX-fx-76a" id="NvJ-js-tEx"/>
+                                    <outlet property="isOnSwitch" destination="2MB-Zp-ngG" id="yHr-sJ-RfG"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

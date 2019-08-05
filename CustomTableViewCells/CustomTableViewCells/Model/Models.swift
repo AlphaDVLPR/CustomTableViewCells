@@ -15,9 +15,10 @@ class Settings {
     let isOn: Bool
     let icon: UIImage
     
-    init(name: String, icon: UIImage) {
+    init(name: String, icon: UIImage, isOn: Bool = false) {
         self.name = name
         self.icon = icon
+        self.isOn = isOn
     }
     
     
