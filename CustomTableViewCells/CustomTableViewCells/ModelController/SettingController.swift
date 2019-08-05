@@ -10,7 +10,7 @@ import Foundation
 
 class SettingController {
     
-    let sharedInstance = SettingController()
+    static let sharedInstance = SettingController()
     
     var settings = [Settings]()
     
@@ -22,4 +22,5 @@ class SettingController {
         
         settings = [apps, books, music]
     }
+    
 }
